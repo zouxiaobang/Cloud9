@@ -1,0 +1,20 @@
+修改包名时需要注意：
+1、在build.gradle(app)中，需要为greendao中的daoPackage属性进行修改。
+
+
+
+Application类：
+1、由于在Cloud9中，对全局变量进行存储，故Application的Context可通过Cloud9.getApplicationContext()来获取。
+2、若要使用自定义的Logger和Toaster，则需要在自定义的Application中先进行初始化
+3、在自定义的Application中，需要对全局参数进行设置，特别是Context，其他的可选，如APT_HOST/INTECEPTOR等，最后记得要调用configure()方法。
+
+
+网络访问：
+1、网络访问已封装了Retrofit和OkHttp，如需要使用其他框架，可自行替换OkHttp，但保留Retrofit不变。
+2、使用RestClient来对网络进行操作，先调用build()方法，再调用get或post来进行网络请求。
+
+
+数据库的使用：
+1、在dao/entity/中创建一个Javabean类。注意类注解@Entity，类中id注解@Id
+2、直接执行make project，会自动生成dao/gen/下3个文件
+3、增删改查使用方法：

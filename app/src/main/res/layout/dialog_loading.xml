@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@drawable/dialog_simple_info"
+              android:gravity="center"
+              android:minHeight="100dp"
+              android:minWidth="200dp"
+              android:orientation="vertical"
+              android:theme="@style/AppTheme.Transparent">
+
+    <com.rey.material.widget.ProgressView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress.app"
+        app:pv_progressMode="indeterminate"/>
+
+</LinearLayout>
